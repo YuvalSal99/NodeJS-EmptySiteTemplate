@@ -23,7 +23,6 @@ pipeline {
     stage('test') {
       steps {
         sh 'curl localhost:8080'
-        sh 'sudo netstat -lpn |grep :\'8080\''
       }
     }
 
