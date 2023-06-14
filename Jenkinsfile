@@ -15,6 +15,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'npm install'
+        sleep 5
         sh 'npm run start'
       }
     }
