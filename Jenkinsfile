@@ -27,5 +27,17 @@ pipeline {
       }
     }
 
+    stage('package') {
+      steps {
+        sh 'tar czvf nodeejs.tar.gz *'
+      }
+    }
+
+    stage('archive') {
+      steps {
+        archiveArtifacts '*.tar.gz'
+      }
+    }
+
   }
 }
